@@ -28,6 +28,7 @@ import { CredentialResponse } from "interfaces/google";
 import { parseJwt } from "utils/parse-jwt";
 
 import { Login } from "pages/login";
+import home from "pages/home";
 
 const axiosInstance = axios.create();
 axiosInstance.interceptors.request.use((request: AxiosRequestConfig) => {
@@ -141,7 +142,7 @@ function App() {
           routerProvider={routerProvider}
           authProvider={authProvider}
           LoginPage={Login}
-          // DashboardPage={}
+          DashboardPage={home}
         />
       </RefineSnackbarProvider>
     </ColorModeContextProvider>
