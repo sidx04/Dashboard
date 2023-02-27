@@ -1,5 +1,7 @@
 import React from 'react'
 import { useList }from '@pankod/refine-core';
+import { Box } from '@mui/system';
+import { Stack, Typography } from '@pankod/refine-mui';
 import { 
   PieChart,
   PropertyCard,
@@ -7,8 +9,6 @@ import {
   TotalRevenue,
   TopAgent
 } from 'components';
-import { Box } from '@mui/system';
-import { Typography } from '@pankod/refine-mui';
 
 const home = () => {
   return (
@@ -23,31 +23,38 @@ const home = () => {
          title="Properties for Sale"
          value={684}
          series={[75,25]}
-         colors={['#475be8', '#e4e8ef']} 
+         colors={['#475be8', '#c9dcff']} 
         />
 
         <PieChart
          title="Properties for Rent"
          value={550}
          series={[60,40]}
-         colors={['#475be8', '#e4b8ef']} 
+         colors={['#475be8', '#c9dcff']} 
         />
 
         <PieChart
          title="Total Customers"
          value={54684}
-         series={[75,25]}
-         colors={['#275be8', '#e4e8ef']} 
+         series={[64,36]}
+         colors={['#275be8', '#c9dcff']} 
         />
 
         <PieChart
          title="Total Cities"
          value={355}
-         series={[75,25]}
-         colors={['#475be8', '#e4e8ef']} 
+         series={[87,13]}
+         colors={['#475be8', '#c9dcff']} 
         />
       </Box>
 
+      <Stack 
+        mt="25px"
+        width="100%"
+        direction={{xs:"column", lg:"row"}}>
+          <TotalRevenue/>
+          <PropetyReferrals/>
+      </Stack>
     </Box>
 
   )

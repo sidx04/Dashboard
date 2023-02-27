@@ -5,7 +5,20 @@ import ReactApexChart from 'react-apexcharts'
 
 const PieChart = ({ title, value, series, colors } : PieChartProps) => {
   return (
-    <Box>
+    <Box
+      id="chart"
+      flex={1}
+      display="flex"
+      bgcolor="#fcfcfc"
+      justifyContent="space-between"
+      alignItems="center"
+      pl={3.5}
+      py={2}
+      gap={2}
+      borderRadius="10px"
+      minHeight="110px"
+      width="fit-content"
+    >
       <Stack direction="column">
         <Typography fontSize={15} color="#808191">{ title }</Typography>
         <Typography
