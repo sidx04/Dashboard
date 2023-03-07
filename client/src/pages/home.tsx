@@ -51,7 +51,8 @@ const home = () => {
       <Stack 
         mt="25px"
         width="100%"
-        direction={{xs:"column", lg:"row"}}>
+        direction={{xs:"column", lg:"row",}}
+        gap={5}>
           <TotalRevenue/>
           <PropetyReferrals/>
       </Stack>
