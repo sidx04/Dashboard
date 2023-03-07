@@ -1,6 +1,6 @@
 import AgentCard from "./agent/AgentCard";
 import PieChart from "./charts/PieChart";
-import PropetyReferrals from "./charts/PropetyReferrals";
+import PropetyReferrals from "./charts/PropertyReferrals";
 import TotalRevenue from "./charts/TotalRevenue";
 import CustomButton from "./common/CustomButton";
 import Form from "./common/Form";
