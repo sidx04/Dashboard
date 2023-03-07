@@ -29,6 +29,13 @@ import { parseJwt } from "utils/parse-jwt";
 
 import { Login } from "pages/login";
 import home from "pages/home";
+import allProperties from "pages/all-properties";
+import propertyDetails from "pages/property-details";
+import createProperty from "pages/create-property";
+import editProperty from "pages/edit-property";
+import agents from "pages/agent";
+import agentProfile from "pages/agent-profile";
+import myProfile from "pages/my-profile";
 
 const axiosInstance = axios.create();
 axiosInstance.interceptors.request.use((request: AxiosRequestConfig) => {
@@ -109,28 +116,32 @@ function App() {
           resources={[
             {
               name: "property",
-              list: MuiInferencer,
+              list: allProperties,
+              show: propertyDetails,
+              create: createProperty,
+              edit: editProperty,
               icon: <VillaOutlined/>
             },
             {
               name: "agent",
-              list: MuiInferencer,
+              list: agents,
+              show: agentProfile,
               icon: <PeopleAltOutlined/>
             },
             {
               name: "review",
-              list: MuiInferencer,
+              list: home,
               icon: <StarOutlineRounded/>
             },
             {
               name: "message",
-              list: MuiInferencer,
+              list: home,
               icon: <ChatBubbleOutlineOutlined/>
             },
             {
               name: "my-profile",
               options: { label: 'Profile' },
-              list: MuiInferencer,
+              list: myProfile,
               icon: <AccountCircleOutlined/>
             },
             
