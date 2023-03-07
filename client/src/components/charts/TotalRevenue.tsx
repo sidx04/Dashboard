@@ -1,4 +1,3 @@
-import React from 'react'
 import ReactApexChart from 'react-apexcharts'
 import { ArrowCircleUpRounded } from '@mui/icons-material'
 import { TotalRevenueOptions, TotalRevenueSeries } from './chart.config'
