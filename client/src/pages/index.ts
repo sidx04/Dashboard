@@ -1,5 +1,5 @@
 import agentProfile from "./agent-profile";
-import agent from "./agent";
+import agents from "./agent";
 import allProperties from "./all-properties";
 import createProperty from "./create-property";
 import editProperty from "./edit-property";
@@ -9,7 +9,7 @@ import propertyDetails from "./property-details";
 import { Login } from "./login";
 
 export default {
-    agent,
+    agents,
     agentProfile,
     allProperties,
     createProperty,

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const agent = () => {
+const agents = () => {
   return (
-    <div>agent</div>
+    <div>agents</div>
   )
 }
 
-export default agent
+export default agents
