@@ -13,10 +13,14 @@ app.get('/', (req,res)=>{
     res.json({ message:"hello there!" });
 })
 
+
 const server=async()=>{
     try {
         connectDB(process.env.URl);
+        app.listen(process.env.PORT,()=>console.log(`server started on port ${process.env.PORT}...`))
     } catch (error) {
         console.log(error);
     }
 }
+
+server();
