@@ -26,6 +26,5 @@ export {
     deleteProperty,
     getAllProperties,
     getPropertyDetail,
-    deleteProperty,
     updateProperty,
 };
