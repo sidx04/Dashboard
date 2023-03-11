@@ -20,7 +20,7 @@ app.use("/api/v1/properties", propertyRouter);
 
 const server=async()=>{
     try {
-        connectDB(process.env.URl);
+        connectDB(process.env.MONGO_URL);
         app.listen(process.env.PORT,()=>
             console.log(`server started on port ${process.env.PORT}...`));
     } catch (error) {
