@@ -14,7 +14,14 @@ cloudinary.config({
 });
 
 const getAllProperties=async(req,res)=>{
-
+    try {
+        const properties=await Property.find({}).limit(req.query._end);
+        
+        res.status(StatusCodes.OK).json(properties);
+    }
+    catch (error) {
+        
+    }
 };
 
 const getPropertyDetail=async(req,res)=>{
@@ -60,7 +67,7 @@ const createProperty=async(req,res)=>{
 
         await session.commitTransaction();
 
-        res.status(StatusCodes.OK).json({ message: 'property created successfully...' });
+        res.status(StatusCodes.CREATED).json({ message: 'property created successfully...' });
     }
     catch (error) {
         res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ message: error.message});
